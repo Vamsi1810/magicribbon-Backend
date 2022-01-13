@@ -23,5 +23,8 @@ const adminSignup=require('./route/adminsignuproute');
 app.use('/project',detail);
 app.use('/signup',Signup);
 app.use('/adminsignup',adminSignup);
+app.use('/',function(req,res){
+    res.send("Hey it's me Server.........!");
+})
 
 app.listen(port, () => console.log(`running on the server ${port}`));
